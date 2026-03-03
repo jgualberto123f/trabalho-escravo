@@ -11,11 +11,18 @@ public class Movimentacao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (input.GetKey("d"))
+        if (Input.GetKey("d"))
         {
             transform.Translate(0.05f,0,0);
         }
+        if (Input.GetKey("a"))
+        {
+            transform.Translate(-0.05f,0,0);
+        }
+
     }
+
+    
         
 
 
