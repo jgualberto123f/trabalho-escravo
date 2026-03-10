@@ -1,7 +1,11 @@
 using UnityEngine;
 
 public class Movimentacao : MonoBehaviour
-{  
+{
+    bool pulando = false;
+    int inicioPulo = 0;
+    int frameAtual = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,8 +21,22 @@ public class Movimentacao : MonoBehaviour
         }
         if (Input.GetKey("a"))
         {
-            transform.Translate(-0.05f,0,0);
+            this.transform.Translate(-0.05f, 0, 0);
         }
+        if (Input.GetKey("space")&&pulando == false&& Physics.CheckSphere(transform
+        {
+            pulando = true;
+            inicioPulo = flameAtual;
+        }
+        if (pulando && frameAtual - inicioPulo > 100)
+        {
+            pulando = false;
+        }
+        if (pulando)
+        {
+            this.transform.Translate(0, 0.05f, 0);
+        }
+ 
 
     }
 
