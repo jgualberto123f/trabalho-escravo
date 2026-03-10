@@ -23,10 +23,10 @@ public class Movimentacao : MonoBehaviour
         {
             this.transform.Translate(-0.05f, 0, 0);
         }
-        if (Input.GetKey("space")&&pulando == false&& Physics.CheckSphere(transform
+        if (Input.GetKey("space")&&pulando == false&& Physics.CheckSphere(transform.position, 2f))
         {
             pulando = true;
-            inicioPulo = flameAtual;
+            inicioPulo = frameAtual;
         }
         if (pulando && frameAtual - inicioPulo > 100)
         {
